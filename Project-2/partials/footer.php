@@ -4,7 +4,7 @@
 
 </div> -->
 <?php 
-$d = date("dS F Y, g:i A");
+$d = date("Y-m-d H:i:s");
 $year = date("Y");
 ?>
 <footer class="footer sticky-bottom mt-auto py-2 bg-dark">

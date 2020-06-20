@@ -52,7 +52,15 @@
             // insert record into thread table
             $th_title=$_POST['title'];
             $th_desc=$_POST['desc'];
-            $sql = "INSERT INTO `threads` ( `thread_title`, `thread_desc`, `thread_cat_id`, `thread_user_id`, `thread_tstamp`) VALUES ( '$th_title', '$th_desc', ' $catid', '0', current_timestamp());";
+            $sno=$_SESSION['sno'];
+            
+            $th_title= str_replace("<","&lt;","$th_title");
+            $th_title= str_replace(">","&gt;","$th_title");
+            
+            $th_desc= str_replace("<","&lt;","$th_desc");
+            $th_desc= str_replace(">","&gt;","$th_desc");
+            
+            $sql = "INSERT INTO `threads` ( `thread_title`, `thread_desc`, `thread_cat_id`, `thread_user_id`, `thread_tstamp`) VALUES ( '$th_title', '$th_desc', ' $catid', '$sno', current_timestamp());";
             $result = mysqli_query($conn, $sql);
             $showAlert=true;    
             if($showAlert){
@@ -103,6 +111,7 @@
                         <label for="desc">Elaborate your concern</label>
                         <textarea class="form-control" id="desc" name="desc" rows="3"></textarea>
                     </div>
+                    <input type="hidden" name="" value='.$_SESSION['sno'].'>
                     <div class="form-group">
                         <button type="submit" class="btn btn-sm btn-success">Submit</button>
                     </div>
@@ -138,18 +147,27 @@
                 $noResult=true;
                 if ($num_row > 0) {
                     while ($row = mysqli_fetch_assoc($result)) { 
+                        
                         $noResult=false; 
                         $threadid = $row["thread_id"];
                         $title = $row["thread_title"];
                         $desc = $row["thread_desc"];
                         $threattime = $row["thread_tstamp"];
+                        $thread_user_id = $row["thread_user_id"];
+                        
+                        $sql2 = "SELECT * FROM `users_idiscuss` WHERE sno=$thread_user_id";
+                        $result2 =mysqli_query($conn,$sql2);
+                        $row2 = mysqli_fetch_assoc($result2);
+                        $user_name = $row2["user_email"];
+                        
                         echo' <div class="media my-2">
                         <img src="img/userdefault.png" width="50px" class="mr-3" alt="userdefault image">
                         <div class="media-body">
-                        <p class="font-weight-bold my-0">By Anonymus user at :'. $threattime.'</p>
+                        
                             <h5 class="mt-0"><a class="text-dark" href="/phptutorial/Project-2/thread.php?threadid='.$threadid.'"> '. $title.' </a></h5>
                             '. $desc.'
                         </div>
+                        <p class="font-weight-bold my-0"> Asked By: '.$user_name.''. $threattime.'</p>
                     </div>';
                     
                      }

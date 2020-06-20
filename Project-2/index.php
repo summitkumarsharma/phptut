@@ -27,7 +27,7 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="img/slider8.jfif" alt="First slide">
+                <img class="d-block w-100" src="img/slider5.jfif" alt="First slide">
             </div>
             <div class="carousel-item">
                 <img class="d-block w-100" src="img/slider3.jfif" alt="Second slide">

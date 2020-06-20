@@ -38,7 +38,13 @@
                     while ($row = mysqli_fetch_assoc($result)) {
                         $title = $row["thread_title"];
                         $desc= $row["thread_desc"];
-                    
+                        $thread_user_id= $row["thread_user_id"];
+                       
+                        // query to fetch username from users table who start discussion
+                        $sql2 = "SELECT * FROM `users_idiscuss` WHERE sno=$thread_user_id";
+                        $result2 =mysqli_query($conn,$sql2);
+                        $row2 = mysqli_fetch_assoc($result2);
+                        $posted_by = $row2["user_email"];
                      }
                 }
 
@@ -53,7 +59,10 @@
         if($method=="POST"){
             // insert record into comment table
             $th_comment=$_POST['comment'];
-            $sql = "INSERT INTO `comments` (`comment_content`, `thread_id`, `comment_by`, `comment_time`) VALUES ('$th_comment', '$threadid', '0', current_timestamp())";
+            $sno = $_SESSION['sno'];
+            $th_comment= str_replace("<","&lt;","$th_comment");
+            $th_comment= str_replace(">","&gt;","$th_comment");
+            $sql = "INSERT INTO `comments` (`comment_content`, `thread_id`, `comment_by`, `comment_time`) VALUES ('$th_comment', '$threadid', '$sno', current_timestamp())";
             $result = mysqli_query($conn, $sql);
             $showAlert=true;    
             if($showAlert){
@@ -80,7 +89,7 @@
                 Do not PM users asking for help.
                 Remain respectful of other members at all times.
             </p>
-            <p>Posted by:<b>Sumit</b></p>
+            <p>Posted by:<b><?php echo $posted_by;?></b></p>
         </div>
 
 
@@ -94,7 +103,7 @@
         <h3 class="py-2">Post a Comment</h3>
         <form action="'.$_SERVER['REQUEST_URI'].'" method="POST">
             <div class="form-group">
-                <label for="desc">Type your Comment</label>
+                <label for="desc">Type your Comment</label><input type="hidden" name="" value="'.$_SESSION['sno'].'">
                 <textarea class="form-control" id="comment" name="comment" rows="3"></textarea>
             </div>
             <div class="form-group">
@@ -128,16 +137,24 @@
                 $noResult=true; 
                 if ($num_row > 0) {
                     while ($row = mysqli_fetch_assoc($result)) {
+                        
                         $noResult=false; 
                         $commentid = $row["comment_id"];
                         $content = $row["comment_content"];
                         $commenttime = $row["comment_time"];
+                        
+                        $thread_user_id = $row["comment_by"];
+                        
+                        $sql2 = "SELECT * FROM `users_idiscuss` WHERE sno=$thread_user_id";
+                        $result2 =mysqli_query($conn,$sql2);
+                        $row2 = mysqli_fetch_assoc($result2);
+                        $user_name = $row2["user_email"];
                         echo' <div class="media my-3">
                         <img src="img/userdefault.png" width="50px" class="mr-3" alt="userdefault image">
                         <div class="media-body">
-                        <p class="font-weight-bold my-0">By Anonymus user at :'. $commenttime.'</p>
-                            '.  $content.'
+                            <p>'.  $content.'</p>
                         </div>
+                        <p class="font-weight-bold my-0">Comment By : '.$user_name.',At :'. $commenttime.'</p>
                     </div>';
                     
                      }
@@ -145,8 +162,8 @@
                 if($noResult){
                     echo'<div class="jumbotron jumbotron-fluid">
                              <div class="container">
-                                <h4 class="display-5">No Discussions Found</h4>
-                                <p>Be the first to ask the question.</p>
+                                <h4 class="display-5">No Comments Found</h4>
+                                <p>Be the first to post comment </p>
                              </div>
                         </div>';
                 }

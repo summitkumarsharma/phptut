@@ -20,6 +20,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
        if(password_verify($pass,$row['user_pass'])){
            session_start();
            $_SESSION['loggedin'] ="true";
+           $_SESSION['sno'] = $row['sno'];
            $_SESSION['useremail']= $email;
            echo "Logged in". $email;
            header("location:/phptutorial/Project-2/index.php?loggedin=true");
