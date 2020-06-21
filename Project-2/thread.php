@@ -124,7 +124,7 @@
     ?>
 
     <!--  Fetch  Comments from comments table Start here-->
-    <div class="container" id="ques">
+    <div class="container">
         <h3 class="py-2">Discussions</h3>
         <?php
                 include 'partials/dbconnect.php';

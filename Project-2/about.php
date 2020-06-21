@@ -29,7 +29,7 @@
 
     <!--  Categories Star here-->
 
-    <div class="container-fluid mb-2" id="ques">
+    <div class="container-fluid mb-2">
         <h3 class="text-center"> About Us </h3>
         <div class="jumbotron">
             <h4 class="text-center"> iDiscuss - coding Forum<!< /h4>

@@ -41,16 +41,16 @@ echo'
             </li>
         </ul>';
         if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){
-        echo '<form class="form-inline my-2  my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        echo '<form class="form-inline my-2  my-lg-0" method="GET" action="search.php">
+            <input class="form-control mr-sm-2" name="search"type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
             <p class="text-light my-2 ml-2 ">welcome '. $_SESSION['useremail'].'</p>
             <a type="submit" class="btn btn-success mx-2" href="/phptutorial//Project-2/partials/logout.php">Logout</a>
         </form>';
         }
         else{
-        echo'<form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        echo'<form class="form-inline my-2 my-lg-0"method="GET" action="search.php">
+            <input class="form-control mr-sm-2" name="search" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
             <button type="button" class="btn btn-outline-success ml-2" data-toggle="modal"
                 data-target="#loginModal">Login</button>
