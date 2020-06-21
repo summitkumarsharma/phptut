@@ -16,6 +16,7 @@
 <body class="bg-info">
 
     <!-- Navigation bar -->
+    <?php include 'partials/dbconnect.php'; ?>
     <?php include 'partials/header.php'; ?>
 
     <!-- slider start here -->

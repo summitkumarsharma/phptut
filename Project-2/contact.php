@@ -16,6 +16,7 @@
 <body class="bg-info">
 
     <!-- Navigation bar -->
+    <?php include 'partials/dbconnect.php'; ?>
     <?php require 'partials/header.php'; ?>
 
     <!--  code to save contact details into database   -->
@@ -43,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     if(!$conn){
       // die("sorry we failed to connect:".mysqli_connect_error());
-      echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+      echo '<div class="alert alert-danger alert-dismissible fade show mb-0" role="alert">
         <strong>Error!</strong> we are facing some technical problem, your entry has not been saved successfully. 
         we are regret for  the inconvinience caused !!!!!!!!!
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -59,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
         //check for insert data  success
         if($result){
-        echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+        echo '<div class="alert alert-success alert-dismissible fade show my-0" role="alert">
         <strong>Success!</strong> Your Entry has been submitted successfully!
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">×</span>
@@ -81,35 +82,34 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 ?>
 
     <!-- contact slider start here -->
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="https://source.unsplash.com/1600x400/?contact,phone" alt="First slide">
+    <div class="container-fluid px-0">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="img/contact-bg1.jpg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="img/contact-bg2.jpg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="img/contact-bg3.jpg" alt="Third slide">
+                </div>
             </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="https://source.unsplash.com/1600x400/?telephone,reliance"
-                    alt="Second slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="https://source.unsplash.com/1600x400/?mobile,wirelessphone"
-                    alt="Third slide">
-            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
     </div>
-
     <!--  Contact form Section Start here-->
     <div class="container my-3">
         <h3 class="text-center"> Contact Us </h3>

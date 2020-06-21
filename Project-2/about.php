@@ -21,6 +21,7 @@
 <body class="bg-warning">
 
     <!-- Navigation bar -->
+    <?php include 'partials/dbconnect.php'; ?>
     <?php require 'partials/header.php'; ?>
 
     <!-- slider start here -->
