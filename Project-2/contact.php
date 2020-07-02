@@ -83,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     <!-- contact slider start here -->
     <div class="container-fluid px-0">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -108,7 +108,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
-        </div>
+        </div> -->
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29356.098602649632!2d81.67774832795556!3d23.114941533991427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3987b27048f1d845%3A0xcc7bedc62dddd253!2sAnuppur%2C%20Madhya%20Pradesh%20484224!5e0!3m2!1sen!2sin!4v1593618637494!5m2!1sen!2sin"
+            width="1700" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+            tabindex="0"></iframe>
     </div>
     <!--  Contact form Section Start here-->
     <div class="container my-3">
