@@ -111,7 +111,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         </div> -->
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29356.098602649632!2d81.67774832795556!3d23.114941533991427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3987b27048f1d845%3A0xcc7bedc62dddd253!2sAnuppur%2C%20Madhya%20Pradesh%20484224!5e0!3m2!1sen!2sin!4v1593618637494!5m2!1sen!2sin"
-            width="1700" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+            width="100%" height="500px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
             tabindex="0"></iframe>
     </div>
     <!--  Contact form Section Start here-->
