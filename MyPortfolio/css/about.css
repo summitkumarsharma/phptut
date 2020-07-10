@@ -1,0 +1,42 @@
+/* about section */
+
+#about {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 160px 200px;
+    border: 2px solid rgb(0, 255, 195);
+}
+
+#about .left-about:hover {
+    position: relative;
+    animation: mymove 1s normal;
+}
+
+#about .left-about {
+    margin-right: 125px;
+}
+
+#about .left-about img {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    animation: mymove 1s alternate;
+}
+
+#about .right-about:hover {
+    position: relative;
+    animation: mymove1 1s normal 1s none paused;
+}
+
+#about .right-about p {
+    animation-duration: 3s;
+    animation-name: identifier;
+}
+
+#about .right-about img {
+    width: 40px;
+    height: 40px;
+}

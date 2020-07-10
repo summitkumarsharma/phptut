@@ -1,0 +1,91 @@
+ /*Navigation bar */
+ 
+ #navbar {
+     border: 4px solid black;
+     display: flex;
+     align-items: center;
+     position: sticky;
+     top: 0px;
+     left: 0px;
+     transition: transform .5s;
+ }
+ 
+ #navbar:hover {
+     /* display: inline-block; */
+ }
+ 
+ #navbar::before {
+     content: "";
+     background-color: rgb(240, 178, 178);
+     position: absolute;
+     top: 0px;
+     left: 0px;
+     height: 100%;
+     width: 100%;
+     z-index: -1;
+     opacity: 0.4;
+ }
+ /* Navigation bar : logo and Image */
+ 
+ #logo {
+     margin: 8px 34px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ 
+ #logo img {
+     height: 50px;
+     margin: 3px 6px;
+ }
+ 
+ #logotext {
+     font-family: 'Baloo Chettan 2', cursive;
+     color: black;
+     display: block;
+     padding: 3px 22px;
+     border-radius: 20px;
+     font-size: 1.3rem;
+     font-weight: bold;
+ }
+ /* Navigation bar : List styling */
+ 
+ #navbar ul {
+     display: flex;
+     align-items: center;
+     font-family: 'Baloo Bhai', cursive;
+     justify-content: center;
+     margin-top: 14px;
+ }
+ 
+ #navbar ul li {
+     list-style: none;
+     font-size: 1.3rem;
+     text-transform: uppercase;
+     font-size: 1rem;
+ }
+ 
+ #navbar ul li a {
+     color: rgb(12, 11, 11);
+     display: block;
+     padding: 3px 22px;
+     border-radius: 20px;
+     text-decoration: none;
+     transition: all .3s ease;
+ }
+ 
+ #navbar ul li a:hover {
+     color: rgba(238, 225, 226, 0.973);
+     background-color: blueviolet;
+ }
+ 
+ #navbar>ul {
+     visibility: hidden;
+     opacity: 0;
+     transition: visibility 0s, opacity 0.5s linear;
+ }
+ 
+ #navbar:hover>ul {
+     visibility: visible;
+     opacity: 1;
+ }

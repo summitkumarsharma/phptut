@@ -1,0 +1,83 @@
+/* Home section */
+
+#home {
+    display: flex;
+    flex-direction: row;
+    height: 628px;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 200px;
+    border: 2px solid red;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    background: url('../img/bg.gif') no-repeat center center/cover;
+    top: 0px;
+    left: 0px;
+    height: 900px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+    clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+}
+
+span {
+    color: rgb(29, 243, 122);
+    font-weight: bold;
+}
+
+.left img {
+    width: 400px;
+    height: 300px;
+    margin: 5px 0px;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    position: relative;
+    animation: mymove 1s alternate;
+}
+
+.right {
+    margin: 5px 113px;
+    padding: 2px 2px;
+    position: relative;
+    animation: mymove1 1s reverse;
+}
+
+#home h5 {
+    color: white;
+    /* text-align: center; */
+    font-family: 'Bree Serif', serif;
+    font-size: 20px;
+}
+
+#home h2 {
+    color: rgb(19, 18, 18);
+    font-family: 'Bree Serif', serif;
+    font-size: 30px;
+}
+
+#home p {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Bree Serif', serif;
+    text-align: justify;
+}
+
+.btn-1 {
+    padding: 10px 10px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn-1:hover {
+    border: 2px solid black;
+    background-color: rgb(20, 140, 34);
+    transition: all background-color 2s ease-in-out;
+}
