@@ -1,33 +1,53 @@
 /* client section */
 
-#client-section {
-    height: 347px;
+section.reviews {
+    width: 100%;
+    height: 100%;
     border: 2px solid rgb(46, 165, 118);
 }
 
-#client-section::before {
-    content: "";
-    position: absolute;
-    background: url('../bg.jpg');
-    width: 100%;
-    height: 344px;
-    z-index: -1;
-    opacity: 0.4;
+section.reviews .slider .slide img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
 }
 
-#clients {
-    border: 2px solid rgb(193, 90, 158);
+section.reviews .slider .slide {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 2rem 6rem;
+    text-align: center;
 }
 
-.client-items {
-    padding: 34px;
-    margin: 2px;
-    border: 2px solid rgb(46, 165, 118);
+section.reviews .slider .slide p {
+    font-family: sans-serif;
+    margin-bottom: 0 1rem;
+    color: rgb(233, 150, 25);
 }
 
-#clients img {
-    height: 124px;
+section.reviews .slider-dots .dots {
+    list-style-type: none;
+    display: flex!important;
+    justify-content: center;
+}
+
+section.reviews .slider-dots button {
+    /* margin-top: auto; */
+    font-size: 0;
+    width: 20px;
+    height: 15px;
+    margin-right: 0.3rem;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    background-color: darkgray;
+}
+
+section.reviews .dots li.slick-active button {
+    width: 30px;
+    background-color: rgb(27, 208, 236);
 }

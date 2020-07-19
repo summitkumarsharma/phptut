@@ -3,8 +3,8 @@
     background: url('/img/freelancer-img.jpeg') no-repeat center center/cover;
     text-align: center;
     border: 2px solid rgb(25, 209, 15);
-    padding: 250px 0px;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 80%, 0% 100%);
+    padding: 300px 0px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 90%, 0% 100%);
 }
 
 #freelancer h3 {

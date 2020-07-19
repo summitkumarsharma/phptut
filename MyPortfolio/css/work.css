@@ -1,0 +1,56 @@
+    /* work section */
+    
+    section.work {
+        /* background-color: rgb(228, 202, 194); */
+        width: 100%;
+        height: 100%;
+        /* padding-top: 70px; */
+        border: 2px solid tomato;
+    }
+    
+    section.work .card-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+        padding: 50px 4px;
+        border: 2px solid tomato;
+    }
+    
+    section.work .card-wrapper .card {
+        position: relative;
+        height: 250px;
+    }
+    
+    section.work .card-wrapper .card .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgb(125, 230, 231);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        opacity: 0;
+        transition: all .3s ease;
+    }
+    
+    section.work .card-wrapper .card .overlay a {
+        color: rgb(236, 130, 192);
+        text-decoration: none;
+    }
+    
+    section.work .card-wrapper .card .overlay span {
+        color: rgb(236, 130, 192);
+    }
+    
+    section.work .card-wrapper .card img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    section.work .card-wrapper .card:hover .overlay {
+        opacity: 1;
+    }

@@ -8,6 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
     <title>Welcome to My Portfolio</title>
 
@@ -51,11 +52,15 @@
                     <a href="#freelancer">Pages</a>
                 </li>
                 <li class="item">
-                    <a href="#client-section">Our Client</a>
+                    <a href="#client-reviews">Our Client</a>
                 </li>
                 <li class="item">
-                    <a href="#client-section">Blog</a>
+                    <a href="#work-section">Our Work</a>
                 </li>
+                <li class="item">
+                    <a href="#">Blog</a>
+                </li>
+
                 <li class="item">
                     <a href="#contact">Contact Us</a>
                 </li>
@@ -148,27 +153,145 @@
             <button class="btn-1">Download CV</button>
         </section>
 
-        <section id="client-section ">
-            <h1 class="h-primary center ">Our Clients</h1>
-            <div id="clients ">
-                <div class="client-items ">
-                    <img src="img/logo1.png " alt="Our client ">
+        <section id="client-reviews" class="reviews">
+            <div class="container">
+                <h3 class="h-primary center">Our <span>Client</span></h3>
+                <p class="center">We Provide best design for your Buisness Solutions</p>
+                <div class="slider">
+                    <div class="slide">
+                        <img src="img/client-1.png" alt="">
+                        <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, perspiciatis tempora officiis pariatur perferendis dolor dolore numquam maxime delectus nostrum aspernatur, unde laborum iusto ratione tempore architecto a, eveniet
+                            quibusdam. Excepturi, ipsam officia."</p>
+                        <span>-Client Name1,Company ABC</span>
+                    </div>
+                    <div class="slide">
+                        <img src="img/client-1.png" alt="">
+                        <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, perspiciatis tempora officiis pariatur perferendis dolor dolore numquam maxime delectus nostrum aspernatur, unde laborum iusto ratione tempore architecto a, eveniet
+                            quibusdam. Excepturi, ipsam officia."</p>
+                        <span>-Client Name2,Company ABC</span>
+                    </div>
+                    <div class="slide">
+                        <img src="img/client-1.png" alt="">
+                        <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, perspiciatis tempora officiis pariatur perferendis dolor dolore numquam maxime delectus nostrum aspernatur, unde laborum iusto ratione tempore architecto a, eveniet
+                            quibusdam. Excepturi, ipsam officia."</p>
+                        <span>-Client Name3,Company ABC</span>
+                    </div>
+                    <div class="slide">
+                        <img src="img/client-1.png" alt="">
+                        <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, perspiciatis tempora officiis pariatur perferendis dolor dolore numquam maxime delectus nostrum aspernatur, unde laborum iusto ratione tempore architecto a, eveniet
+                            quibusdam. Excepturi, ipsam officia."</p>
+                        <span>-Client Name4,Company ABC</span>
+                    </div>
                 </div>
-                <div class="client-items ">
-                    <img src="img/logo2.png " alt="Our client ">
-                </div>
-                <div class="client-items ">
-                    <img src="img/logo3.png " alt="Our client ">
-                </div>
-                <div class="client-items ">
-                    <img src="img/logo4.png " alt="Our client ">
-                </div>
-
-                <div class="client-items ">
-                    <img src="img/logo2.png " alt="Our client ">
+                <div class="slider-dots"></div>
+            </div>
+        </section>
+        <section id="work-section" class="work">
+            <div class="container">
+                <h3 class="h-primary center">Our <span>Works</span></h3>
+                <p class="center">We Provide best design for your Buisness Solutions</p>
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="overlay">
+                            <span>Categories</span>
+                            <a href="">Web Development</a>
+                        </div>
+                        <img src="img/work-1.jpg" alt="">
+                    </div>
+                    <div class="card">
+                        <div class="overlay">
+                            <span>Categories</span>
+                            <a href="">Web Development</a>
+                        </div>
+                        <img src="img/work-2.jpg" alt="">
+                    </div>
+                    <div class="card">
+                        <div class="overlay">
+                            <span>Categories</span>
+                            <a href="">Web Development</a>
+                        </div>
+                        <img src="img/work-3.jpeg" alt="">
+                    </div>
+                    <div class="card">
+                        <div class="overlay">
+                            <span>Categories</span>
+                            <a href="">Web Development</a>
+                        </div>
+                        <img src="img/work-4.jpg" alt="">
+                    </div>
+                    <div class="card">
+                        <div class="overlay">
+                            <span>Categories</span>
+                            <a href="">Web Development</a>
+                        </div>
+                        <img src="img/work-5.jpeg" alt="">
+                    </div>
+                    <div class="card">
+                        <div class="overlay">
+                            <span>Categories</span>
+                            <a href="">Web Development</a>
+                        </div>
+                        <img src="img/work-6.jpg" alt="">
+                    </div>
                 </div>
             </div>
         </section>
+        <section class="blog">
+            <div class="container">
+                <h3 class="center">Our <span>Blog</span></h3>
+                <p class="center">We Provide best design for your Buisness Solutions</p>
+
+                <div class="card-wrapper">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="img/blog-1.jpeg" alt="">
+                        </div>
+                        <div class="card-content">
+                            <a href="">
+                                <h3>
+                                    Blog Title
+                                </h3>
+                            </a>
+                            <span> on Date ....</span>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas distinctio explicabo dignissimos sunt repellat quos, ut mollitia minus.</p>
+                            <a href="">Read More</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="img/blog-1.jpeg" alt="">
+                        </div>
+                        <div class="card-content">
+                            <a href="">
+                                <h3>
+                                    Blog Title
+                                </h3>
+                            </a>
+                            <span> on Date ....</span>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas distinctio explicabo dignissimos sunt repellat quos, ut mollitia minus.</p>
+                            <a href="">Read More</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="img/blog-1.jpeg" alt="">
+                        </div>
+                        <div class="card-content">
+                            <a href="">
+                                <h3>
+                                    Blog Title
+                                </h3>
+                            </a>
+                            <span> on Date ....</span>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas distinctio explicabo dignissimos sunt repellat quos, ut mollitia minust.</p>
+                            <a href="">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
 
         <section id="contact ">
             <h1 class="h-primary center ">Contact Us </h1>
@@ -211,7 +334,9 @@
     </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js " integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI " crossorigin="anonymous ">
     </script>
-
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- <script>
         var preloader = document.getElementById("loading ");
         var myVar;
@@ -232,6 +357,7 @@
         }
     </script>
     <script src="js/index.js"></script>
+
 </body>
 
 </html>

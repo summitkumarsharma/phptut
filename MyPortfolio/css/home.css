@@ -8,6 +8,7 @@
     align-items: center;
     padding: 3px 200px;
     border: 2px solid red;
+    /* margin-top: 5rem; */
 }
 
 #home::before {

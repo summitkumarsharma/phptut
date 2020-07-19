@@ -7,11 +7,7 @@
      position: sticky;
      top: 0px;
      left: 0px;
-     transition: transform .5s;
- }
- 
- #navbar:hover {
-     /* display: inline-block; */
+     width: 100%;
  }
  
  #navbar::before {
@@ -78,8 +74,7 @@
      color: rgba(238, 225, 226, 0.973);
      background-color: blueviolet;
  }
- 
- #navbar>ul {
+ /* #navbar>ul {
      visibility: hidden;
      opacity: 0;
      transition: visibility 0s, opacity 0.5s linear;
@@ -88,4 +83,11 @@
  #navbar:hover>ul {
      visibility: visible;
      opacity: 1;
+ } */
+ 
+ footer {
+     border: 2px solid aqua;
+     background-color: black;
+     color: white;
+     padding: 9px 20px;
  }
